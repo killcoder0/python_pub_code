@@ -1,0 +1,1987 @@
+************* Module pub.pirate.controller
+C: 11, 0: Trailing whitespace (trailing-whitespace)
+C: 22, 0: Exactly one space required after comma
+    def set_state(self,state):
+                      ^ (bad-whitespace)
+C: 24, 0: Trailing whitespace (trailing-whitespace)
+C: 28, 0: Exactly one space required after comma
+        instance.add_timeout(deadline,self.fire)
+                                     ^ (bad-whitespace)
+C: 30, 0: Trailing whitespace (trailing-whitespace)
+C: 31, 0: Exactly one space required after comma
+    def fire(self,entry_map,interval):
+                 ^ (bad-whitespace)
+C: 31, 0: Exactly one space required after comma
+    def fire(self,entry_map,interval):
+                           ^ (bad-whitespace)
+C: 36, 0: Exactly one space required after comma
+        id_mgr.set_id("SpiderID",act_id)
+                                ^ (bad-whitespace)
+C: 37, 0: Line too long (106/80) (line-too-long)
+C: 37, 0: Exactly one space required after comma
+        logginghelper.info(logginghelper.StatisticEventLog(str(act_id),"Spider",str(time.time()),"Start"))
+                                                                      ^ (bad-whitespace)
+C: 37, 0: Exactly one space required after comma
+        logginghelper.info(logginghelper.StatisticEventLog(str(act_id),"Spider",str(time.time()),"Start"))
+                                                                               ^ (bad-whitespace)
+C: 37, 0: Exactly one space required after comma
+        logginghelper.info(logginghelper.StatisticEventLog(str(act_id),"Spider",str(time.time()),"Start"))
+                                                                                                ^ (bad-whitespace)
+C: 40, 0: Exactly one space required after comma
+        for url,processor_class in entry_map:
+               ^ (bad-whitespace)
+C: 42, 0: Exactly one space required after comma
+            job = net_task.make_job(req,None,None)
+                                       ^ (bad-whitespace)
+C: 42, 0: Exactly one space required after comma
+            job = net_task.make_job(req,None,None)
+                                            ^ (bad-whitespace)
+C: 56, 0: Exactly one space required after comma
+def fire(entry_map,interval):
+                  ^ (bad-whitespace)
+C: 57, 0: Exactly one space required after comma
+    return _controller.fire(entry_map,interval)
+                                     ^ (bad-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  6, 0: Unable to import 'xlog' (import-error)
+C: 12, 0: Missing class docstring (missing-docstring)
+C: 19, 4: Missing method docstring (missing-docstring)
+C: 22, 4: Missing method docstring (missing-docstring)
+C: 25, 4: Missing method docstring (missing-docstring)
+C: 31, 4: Missing method docstring (missing-docstring)
+W: 34, 8: Relative import 'id_mgr', should be 'pub.pirate.id_mgr' (relative-import)
+W: 38, 8: Relative import 'req_gen', should be 'pub.pirate.req_gen' (relative-import)
+W: 39, 8: Relative import 'net_task', should be 'pub.pirate.net_task' (relative-import)
+C: 47, 0: Invalid constant name "_controller" (invalid-name)
+C: 49, 0: Missing function docstring (missing-docstring)
+W: 50, 4: Using the global statement (global-statement)
+C: 50, 4: Invalid constant name "_controller" (invalid-name)
+C: 56, 0: Missing function docstring (missing-docstring)
+C: 59, 0: Missing function docstring (missing-docstring)
+C: 62, 0: Missing function docstring (missing-docstring)
+
+
+Report
+======
+48 statements analysed.
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |48     |90.57 |48       |=          |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |5      |9.43  |5        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+External dependencies
+---------------------
+::
+
+    pub 
+      \-pirate 
+        \-id_mgr (pub.pirate.controller)
+        \-net_task (pub.pirate.controller)
+        \-req_gen (pub.pirate.controller)
+    tornado 
+      \-ioloop (pub.pirate.controller)
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |5      |5          |=          |20.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |4      |4          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |29     |29       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |4      |4        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++--------------------+------------+
+|message id          |occurrences |
++====================+============+
+|bad-whitespace      |13          |
++--------------------+------------+
+|missing-docstring   |10          |
++--------------------+------------+
+|trailing-whitespace |3           |
++--------------------+------------+
+|relative-import     |3           |
++--------------------+------------+
+|invalid-name        |2           |
++--------------------+------------+
+|line-too-long       |1           |
++--------------------+------------+
+|import-error        |1           |
++--------------------+------------+
+|global-statement    |1           |
++--------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 3.12/10 (previous run: 3.12/10, +0.00)
+
+************* Module pub.pirate.err_filter
+W:  3, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 18, 0: Exactly one space required after comma
+    file_handler = open("check.log","r")
+                                   ^ (bad-whitespace)
+C: 42, 0: Final newline missing (missing-final-newline)
+C:  1, 0: Missing module docstring (missing-docstring)
+C:  1, 0: Missing function docstring (missing-docstring)
+C:  5, 0: Missing function docstring (missing-docstring)
+C: 10, 0: Missing function docstring (missing-docstring)
+C: 18, 4: Invalid constant name "file_handler" (invalid-name)
+C: 19, 4: Invalid constant name "filename" (invalid-name)
+C: 20, 4: Invalid constant name "line" (invalid-name)
+C: 22, 8: Invalid constant name "line" (invalid-name)
+C: 27,12: Invalid constant name "filename" (invalid-name)
+C: 32,16: Invalid constant name "filename" (invalid-name)
+C: 35,16: Invalid constant name "line" (invalid-name)
+C: 40,20: Invalid constant name "filename" (invalid-name)
+
+
+Report
+======
+36 statements analysed.
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |34     |87.18 |34       |=          |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |5      |12.82 |5        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |3      |3          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |14     |14       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |1      |1        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++----------------------+------------+
+|message id            |occurrences |
++======================+============+
+|invalid-name          |8           |
++----------------------+------------+
+|missing-docstring     |4           |
++----------------------+------------+
+|mixed-indentation     |1           |
++----------------------+------------+
+|missing-final-newline |1           |
++----------------------+------------+
+|bad-whitespace        |1           |
++----------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 5.83/10 (previous run: 5.83/10, +0.00)
+
+************* Module pub.pirate.etc
+C:  3, 0: Final newline missing (missing-final-newline)
+C:  1, 0: Missing module docstring (missing-docstring)
+C:  3, 0: Invalid constant name "request_timeout" (invalid-name)
+
+
+Report
+======
+2 statements analysed.
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |3      |3        |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |0      |0        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++----------------------+------------+
+|message id            |occurrences |
++======================+============+
+|missing-final-newline |1           |
++----------------------+------------+
+|missing-docstring     |1           |
++----------------------+------------+
+|invalid-name          |1           |
++----------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at -5.00/10 (previous run: -5.00/10, +0.00)
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |2      |50.00 |2        |=          |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |2      |50.00 |2        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+************* Module pub.pirate.http_client_engine
+C:  9, 0: Line too long (81/80) (line-too-long)
+C: 11, 0: Exactly one space required after comma
+    def __init__(self,site_conn_limit,default_limit):
+                     ^ (bad-whitespace)
+C: 11, 0: Exactly one space required after comma
+    def __init__(self,site_conn_limit,default_limit):
+                                     ^ (bad-whitespace)
+C: 19, 0: Exactly one space required after comma
+        if not site_conn_limit or not isinstance(site_conn_limit,dict):
+                                                                ^ (bad-whitespace)
+C: 24, 0: Exactly one space required after comma
+    def on_response(self,response):
+                        ^ (bad-whitespace)
+C: 29, 0: Trailing whitespace (trailing-whitespace)
+C: 31, 0: Exactly one space required after comma
+        def __init__(self,client,pending_count=0):
+                         ^ (bad-whitespace)
+C: 31, 0: Exactly one space required after comma
+        def __init__(self,client,pending_count=0):
+                                ^ (bad-whitespace)
+C: 36, 0: Exactly one space required after comma
+        def __init__(self,engine,cbFunc):
+                         ^ (bad-whitespace)
+C: 36, 0: Exactly one space required after comma
+        def __init__(self,engine,cbFunc):
+                                ^ (bad-whitespace)
+C: 40, 0: Exactly one space required after comma
+        def callback(self,response):
+                         ^ (bad-whitespace)
+C: 44, 0: Exactly one space required after comma
+    def fetch(self,request,cbFunc):
+                  ^ (bad-whitespace)
+C: 44, 0: Exactly one space required after comma
+    def fetch(self,request,cbFunc):
+                          ^ (bad-whitespace)
+C: 61, 0: Line too long (90/80) (line-too-long)
+C: 64, 0: Exactly one space required after comma
+        cb_obj = self.CallbackWrapper(self,cbFunc)
+                                          ^ (bad-whitespace)
+C: 65, 0: Exactly one space required after comma
+        client.client.fetch(request,cb_obj.callback)
+                                   ^ (bad-whitespace)
+C: 69, 0: Exactly one space required after comma
+    def set_conn_limit(self,domain,count):
+                           ^ (bad-whitespace)
+C: 69, 0: Exactly one space required after comma
+    def set_conn_limit(self,domain,count):
+                                  ^ (bad-whitespace)
+C: 75, 0: Exactly one space required after comma
+    def get_conn_limit(self,domain):
+                           ^ (bad-whitespace)
+C: 80, 0: Exactly one space required after comma
+    def get_pending_count(self,domain=None):
+                              ^ (bad-whitespace)
+C: 90, 0: Exactly one space required after comma
+    def get_free_conn(self,domain):
+                          ^ (bad-whitespace)
+C: 95, 0: Exactly one space required after comma
+def initialize(site_conn_limit=None,default_limit=10):
+                                   ^ (bad-whitespace)
+C: 99, 0: Exactly one space required after comma
+    _engine = HTTPClientEngine(site_conn_limit,default_limit)
+                                              ^ (bad-whitespace)
+C:105, 0: Line too long (88/80) (line-too-long)
+C:109, 0: Line too long (160/80) (line-too-long)
+C:109, 0: Exactly one space required after comma
+    print "current request count in pending:"," www.baidu.com:",engine.get_pending_count("www.baidu.com",),"www.qq.com:",engine.get_pending_count("www.qq.com",)
+                                             ^ (bad-whitespace)
+C:109, 0: Exactly one space required after comma
+    print "current request count in pending:"," www.baidu.com:",engine.get_pending_count("www.baidu.com",),"www.qq.com:",engine.get_pending_count("www.qq.com",)
+                                                               ^ (bad-whitespace)
+C:109, 0: Exactly one space required after comma
+    print "current request count in pending:"," www.baidu.com:",engine.get_pending_count("www.baidu.com",),"www.qq.com:",engine.get_pending_count("www.qq.com",)
+                                                                                                          ^ (bad-whitespace)
+C:109, 0: Exactly one space required after comma
+    print "current request count in pending:"," www.baidu.com:",engine.get_pending_count("www.baidu.com",),"www.qq.com:",engine.get_pending_count("www.qq.com",)
+                                                                                                                        ^ (bad-whitespace)
+C:110, 0: Exactly one space required after comma
+    print "Connection:",response.headers["Connection"]
+                       ^ (bad-whitespace)
+C:118, 0: Exactly one space required after comma
+    for i in range(0,30):
+                    ^ (bad-whitespace)
+C:119, 0: Exactly one space required after comma
+        req = req_gen.make_request("http://www.baidu.com/",no_keep_alive=False)
+                                                          ^ (bad-whitespace)
+C:120, 0: Exactly one space required after comma
+        this_engine.fetch(req,test_on_response)
+                             ^ (bad-whitespace)
+C:121, 0: Exactly one space required after comma
+        req = req_gen.make_request("http://www.qq.com/",no_keep_alive=False)
+                                                       ^ (bad-whitespace)
+C:122, 0: Exactly one space required after comma
+        this_engine.fetch(req,test_on_response)
+                             ^ (bad-whitespace)
+C:123, 0: Line too long (137/80) (line-too-long)
+C:123, 0: Exactly one space required after comma
+        print "www.baidu.com:",this_engine.get_pending_count("www.baidu.com",),"www.qq.com:",this_engine.get_pending_count("www.qq.com",)
+                              ^ (bad-whitespace)
+C:123, 0: Exactly one space required after comma
+        print "www.baidu.com:",this_engine.get_pending_count("www.baidu.com",),"www.qq.com:",this_engine.get_pending_count("www.qq.com",)
+                                                                              ^ (bad-whitespace)
+C:123, 0: Exactly one space required after comma
+        print "www.baidu.com:",this_engine.get_pending_count("www.baidu.com",),"www.qq.com:",this_engine.get_pending_count("www.qq.com",)
+                                                                                            ^ (bad-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+C: 24, 4: Missing method docstring (missing-docstring)
+C: 30, 4: Missing class docstring (missing-docstring)
+R: 30, 4: Too few public methods (0/2) (too-few-public-methods)
+C: 35, 4: Missing class docstring (missing-docstring)
+C: 40, 8: Missing method docstring (missing-docstring)
+R: 35, 4: Too few public methods (1/2) (too-few-public-methods)
+C: 44, 4: Invalid argument name "cbFunc" (invalid-name)
+C: 44, 4: Missing method docstring (missing-docstring)
+W: 52,15: Catching too general exception Exception (broad-except)
+C: 69, 4: Missing method docstring (missing-docstring)
+C: 75, 4: Missing method docstring (missing-docstring)
+C: 80, 4: Missing method docstring (missing-docstring)
+C: 90, 4: Missing method docstring (missing-docstring)
+C: 93, 0: Invalid constant name "_engine" (invalid-name)
+C: 95, 0: Missing function docstring (missing-docstring)
+W: 96, 4: Using the global statement (global-statement)
+C: 96, 4: Invalid constant name "_engine" (invalid-name)
+C:102, 0: Missing function docstring (missing-docstring)
+C:107, 0: Missing function docstring (missing-docstring)
+F:113, 4: Unable to import 'config_loader' (import-error)
+C:116, 4: Invalid constant name "this_engine" (invalid-name)
+W:117, 4: Relative import 'req_gen', should be 'pub.pirate.req_gen' (relative-import)
+
+
+Report
+======
+96 statements analysed.
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |97     |87.39 |97       |=          |
++----------+-------+------+---------+-----------+
+|docstring |4      |3.60  |4        |=          |
++----------+-------+------+---------+-----------+
+|comment   |2      |1.80  |2        |=          |
++----------+-------+------+---------+-----------+
+|empty     |8      |7.21  |8        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+External dependencies
+---------------------
+::
+
+    pub 
+      \-pirate 
+        \-req_gen (pub.pirate.http_client_engine)
+    tornado 
+      \-curl_httpclient (pub.pirate.http_client_engine)
+      \-httpclient (pub.pirate.http_client_engine)
+      \-ioloop (pub.pirate.http_client_engine)
+    urlparse (pub.pirate.http_client_engine)
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |3      |3          |=          |33.33       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |10     |10         |=          |30.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |3      |3          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |56     |56       |=          |
++-----------+-------+---------+-----------+
+|refactor   |2      |2        |=          |
++-----------+-------+---------+-----------+
+|warning    |3      |3        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++-----------------------+------------+
+|message id             |occurrences |
++=======================+============+
+|bad-whitespace         |33          |
++-----------------------+------------+
+|missing-docstring      |13          |
++-----------------------+------------+
+|line-too-long          |5           |
++-----------------------+------------+
+|invalid-name           |4           |
++-----------------------+------------+
+|too-few-public-methods |2           |
++-----------------------+------------+
+|trailing-whitespace    |1           |
++-----------------------+------------+
+|relative-import        |1           |
++-----------------------+------------+
+|import-error           |1           |
++-----------------------+------------+
+|global-statement       |1           |
++-----------------------+------------+
+|broad-except           |1           |
++-----------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 3.65/10 (previous run: 3.65/10, +0.00)
+
+************* Module pub.pirate.id_mgr
+C: 17, 0: Exactly one space required after comma
+def set_id(id_key,id_value):
+                 ^ (bad-whitespace)
+C: 19, 0: Final newline missing (missing-final-newline)
+C:  1, 0: Missing module docstring (missing-docstring)
+C:  3, 0: Invalid constant name "_start_id" (invalid-name)
+C:  5, 0: Missing function docstring (missing-docstring)
+W:  6, 4: Using the global statement (global-statement)
+C:  6, 4: Invalid constant name "_start_id" (invalid-name)
+C: 10, 0: Invalid constant name "_id_map" (invalid-name)
+C: 12, 0: Missing function docstring (missing-docstring)
+C: 17, 0: Missing function docstring (missing-docstring)
+W: 18, 4: Using global for '_id_map' but no assignment is done (global-variable-not-assigned)
+C: 18, 4: Invalid constant name "_id_map" (invalid-name)
+
+
+Report
+======
+15 statements analysed.
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |10     |10       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |2      |2        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++-----------------------------+------------+
+|message id                   |occurrences |
++=============================+============+
+|missing-docstring            |4           |
++-----------------------------+------------+
+|invalid-name                 |4           |
++-----------------------------+------------+
+|missing-final-newline        |1           |
++-----------------------------+------------+
+|global-variable-not-assigned |1           |
++-----------------------------+------------+
+|global-statement             |1           |
++-----------------------------+------------+
+|bad-whitespace               |1           |
++-----------------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 2.00/10 (previous run: 2.00/10, +0.00)
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+-------+---------+-----------+
+|type      |number |%      |previous |difference |
++==========+=======+=======+=========+===========+
+|code      |15     |100.00 |15       |=          |
++----------+-------+-------+---------+-----------+
+|docstring |0      |0.00   |0        |=          |
++----------+-------+-------+---------+-----------+
+|comment   |0      |0.00   |0        |=          |
++----------+-------+-------+---------+-----------+
+|empty     |0      |0.00   |0        |=          |
++----------+-------+-------+---------+-----------+
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |3      |3          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+************* Module pub.pirate.net_task
+C:  4, 0: Exactly one space required after comma
+    def __init__(self,request,domain,cur_queue_name,context,engine,retry_times):
+                     ^ (bad-whitespace)
+C:  4, 0: Exactly one space required after comma
+    def __init__(self,request,domain,cur_queue_name,context,engine,retry_times):
+                             ^ (bad-whitespace)
+C:  4, 0: Exactly one space required after comma
+    def __init__(self,request,domain,cur_queue_name,context,engine,retry_times):
+                                    ^ (bad-whitespace)
+C:  4, 0: Exactly one space required after comma
+    def __init__(self,request,domain,cur_queue_name,context,engine,retry_times):
+                                                   ^ (bad-whitespace)
+C:  4, 0: Exactly one space required after comma
+    def __init__(self,request,domain,cur_queue_name,context,engine,retry_times):
+                                                           ^ (bad-whitespace)
+C:  4, 0: Exactly one space required after comma
+    def __init__(self,request,domain,cur_queue_name,context,engine,retry_times):
+                                                                  ^ (bad-whitespace)
+C: 17, 0: Exactly one space required after comma
+    def execute(self,callback):
+                    ^ (bad-whitespace)
+C: 18, 0: Exactly one space required after comma
+        return self.engine.fetch(self.request,callback)
+                                             ^ (bad-whitespace)
+C: 21, 0: Exactly one space required after comma
+def make_job(request,queue_name,context,engine=None,retry_times=10):
+                    ^ (bad-whitespace)
+C: 21, 0: Exactly one space required after comma
+def make_job(request,queue_name,context,engine=None,retry_times=10):
+                               ^ (bad-whitespace)
+C: 21, 0: Exactly one space required after comma
+def make_job(request,queue_name,context,engine=None,retry_times=10):
+                                       ^ (bad-whitespace)
+C: 21, 0: Exactly one space required after comma
+def make_job(request,queue_name,context,engine=None,retry_times=10):
+                                                   ^ (bad-whitespace)
+C: 25, 0: Exactly one space required after comma
+    return Job(request,result.hostname,queue_name,context,engine,retry_times)
+                      ^ (bad-whitespace)
+C: 25, 0: Exactly one space required after comma
+    return Job(request,result.hostname,queue_name,context,engine,retry_times)
+                                      ^ (bad-whitespace)
+C: 25, 0: Exactly one space required after comma
+    return Job(request,result.hostname,queue_name,context,engine,retry_times)
+                                                 ^ (bad-whitespace)
+C: 25, 0: Exactly one space required after comma
+    return Job(request,result.hostname,queue_name,context,engine,retry_times)
+                                                         ^ (bad-whitespace)
+C: 25, 0: Exactly one space required after comma
+    return Job(request,result.hostname,queue_name,context,engine,retry_times)
+                                                                ^ (bad-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+C:  3, 0: Missing class docstring (missing-docstring)
+R:  4, 4: Too many arguments (7/5) (too-many-arguments)
+W: 12,12: Relative import 'http_client_engine', should be 'pub.pirate.http_client_engine' (relative-import)
+C: 17, 4: Missing method docstring (missing-docstring)
+R:  3, 0: Too few public methods (1/2) (too-few-public-methods)
+C: 21, 0: Missing function docstring (missing-docstring)
+
+
+Report
+======
+21 statements analysed.
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |21     |21       |=          |
++-----------+-------+---------+-----------+
+|refactor   |2      |2        |=          |
++-----------+-------+---------+-----------+
+|warning    |1      |1        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++-----------------------+------------+
+|message id             |occurrences |
++=======================+============+
+|bad-whitespace         |17          |
++-----------------------+------------+
+|missing-docstring      |4           |
++-----------------------+------------+
+|too-many-arguments     |1           |
++-----------------------+------------+
+|too-few-public-methods |1           |
++-----------------------+------------+
+|relative-import        |1           |
++-----------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at -1.43/10 (previous run: -1.43/10, +0.00)
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |21     |91.30 |21       |=          |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |2      |8.70  |2        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+External dependencies
+---------------------
+::
+
+    pub 
+      \-pirate 
+        \-http_client_engine (pub.pirate.net_task)
+    urlparse (pub.pirate.net_task)
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |2      |2          |=          |50.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+************* Module pub.pirate.pirate
+C:  7, 0: Exactly one space required after comma
+from xlog import xylogging,logginghelper
+                          ^ (bad-whitespace)
+C:  9, 0: Exactly one space required after comma
+def init_taskmgr(queue_name_list,processor_class_list,algorithm):
+                                ^ (bad-whitespace)
+C:  9, 0: Exactly one space required after comma
+def init_taskmgr(queue_name_list,processor_class_list,algorithm):
+                                                     ^ (bad-whitespace)
+C: 11, 0: Exactly one space required after comma
+    return queue_mgr.initialize(queue_name_list,processor_class_list,algorithm)
+                                               ^ (bad-whitespace)
+C: 11, 0: Exactly one space required after comma
+    return queue_mgr.initialize(queue_name_list,processor_class_list,algorithm)
+                                                                    ^ (bad-whitespace)
+C: 13, 0: Exactly one space required after comma
+def init_engine(domain_conn_limit,default_conn_limit=10,timeout=20):
+                                 ^ (bad-whitespace)
+C: 13, 0: Exactly one space required after comma
+def init_engine(domain_conn_limit,default_conn_limit=10,timeout=20):
+                                                       ^ (bad-whitespace)
+C: 16, 0: Exactly one space required after comma
+    if not http_client_engine.initialize(domain_conn_limit,default_conn_limit):
+                                                          ^ (bad-whitespace)
+C: 22, 0: Exactly one space required after comma
+def start_spider(entry_map,interval):
+                          ^ (bad-whitespace)
+C: 26, 0: Exactly one space required after comma
+    return controller.fire(entry_map,interval)
+                                    ^ (bad-whitespace)
+C: 29, 0: Final newline missing (missing-final-newline)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  7, 0: Unable to import 'xlog' (import-error)
+C:  9, 0: Missing function docstring (missing-docstring)
+W: 10, 4: Relative import 'queue_mgr', should be 'pub.pirate.queue_mgr' (relative-import)
+C: 13, 0: Missing function docstring (missing-docstring)
+W: 15, 4: Relative import 'http_client_engine', should be 'pub.pirate.http_client_engine' (relative-import)
+W: 18, 4: Relative import 'etc', should be 'pub.pirate.etc' (relative-import)
+C: 22, 0: Missing function docstring (missing-docstring)
+W: 23, 4: Relative import 'controller', should be 'pub.pirate.controller' (relative-import)
+W:  7, 0: Unused import xylogging (unused-import)
+W:  7, 0: Unused import logginghelper (unused-import)
+
+
+Report
+======
+21 statements analysed.
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |15     |15       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |6      |6        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++----------------------+------------+
+|message id            |occurrences |
++======================+============+
+|bad-whitespace        |10          |
++----------------------+------------+
+|relative-import       |4           |
++----------------------+------------+
+|missing-docstring     |4           |
++----------------------+------------+
+|unused-import         |2           |
++----------------------+------------+
+|missing-final-newline |1           |
++----------------------+------------+
+|import-error          |1           |
++----------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 0.00/10 (previous run: -1.05/10, +1.05)
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |22     |84.62 |20       |+2.00      |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|comment   |1      |3.85  |1        |=          |
++----------+-------+------+---------+-----------+
+|empty     |3      |11.54 |3        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+External dependencies
+---------------------
+::
+
+    pub 
+      \-pirate 
+        \-controller (pub.pirate.pirate)
+        \-etc (pub.pirate.pirate)
+        \-http_client_engine (pub.pirate.pirate)
+        \-queue_mgr (pub.pirate.pirate)
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |3      |3          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+************* Module pub.pirate.pylintcode
+C:  4, 0: Exactly one space required after comma
+    filename,ext = os.path.splitext(file)
+            ^ (bad-whitespace)
+W:  3, 4: Redefining built-in 'file' (redefined-builtin)
+C:  1, 0: Missing module docstring (missing-docstring)
+
+
+Report
+======
+7 statements analysed.
+
+Raw metrics
+-----------
+
++----------+-------+-------+---------+-----------+
+|type      |number |%      |previous |difference |
++==========+=======+=======+=========+===========+
+|code      |7      |100.00 |7        |=          |
++----------+-------+-------+---------+-----------+
+|docstring |0      |0.00   |0        |=          |
++----------+-------+-------+---------+-----------+
+|comment   |0      |0.00   |0        |=          |
++----------+-------+-------+---------+-----------+
+|empty     |0      |0.00   |0        |=          |
++----------+-------+-------+---------+-----------+
+
+
+
+External dependencies
+---------------------
+::
+
+    os (pub.pirate.pylintcode)
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |2      |2        |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |1      |1        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------+------------+
+|message id        |occurrences |
++==================+============+
+|redefined-builtin |1           |
++------------------+------------+
+|missing-docstring |1           |
++------------------+------------+
+|bad-whitespace    |1           |
++------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 5.71/10 (previous run: 5.71/10, +0.00)
+
+************* Module pub.pirate.queue_mgr
+C: 10, 0: Exactly one space required after comma
+    def initialize(self,queue_name_list,queue_processor_list,algorithm):
+                       ^ (bad-whitespace)
+C: 10, 0: Exactly one space required after comma
+    def initialize(self,queue_name_list,queue_processor_list,algorithm):
+                                       ^ (bad-whitespace)
+C: 10, 0: Exactly one space required after comma
+    def initialize(self,queue_name_list,queue_processor_list,algorithm):
+                                                            ^ (bad-whitespace)
+C: 16, 0: Exactly one space required after comma
+        for index in range(0,queue_count):
+                            ^ (bad-whitespace)
+C: 22, 0: Exactly one space required after comma
+            self.__task_queues.append((queue_name,queue_obj))
+                                                 ^ (bad-whitespace)
+C: 26, 0: Exactly one space required after comma
+    def get_next_queue(self,queue_name):
+                           ^ (bad-whitespace)
+C: 38, 0: Exactly one space required after comma
+    def get_queue(self,queue_name):
+                      ^ (bad-whitespace)
+C: 39, 0: Exactly one space required after comma
+        for name,queue_obj in self.__task_queues:
+                ^ (bad-whitespace)
+C: 44, 0: Exactly one space required after comma
+    def get_count(self,queue_name=None):
+                      ^ (bad-whitespace)
+C: 51, 0: Exactly one space required after comma
+        for name,queue_obj in self.__task_queues:
+                ^ (bad-whitespace)
+C: 56, 0: Exactly one space required after comma
+    def signal(self,domain):
+                   ^ (bad-whitespace)
+C: 64, 0: Trailing whitespace (trailing-whitespace)
+C: 76, 0: Exactly one space required after comma
+        for queue_name,queue_obj in self.__task_queues:
+                      ^ (bad-whitespace)
+C: 86, 0: Exactly one space required after comma
+def initialize(queue_name_list,queue_processor_list,algorithm):
+                              ^ (bad-whitespace)
+C: 86, 0: Exactly one space required after comma
+def initialize(queue_name_list,queue_processor_list,algorithm):
+                                                   ^ (bad-whitespace)
+C: 87, 0: Exactly one space required after comma
+    return _queue_mgr.initialize(queue_name_list,queue_processor_list,algorithm)
+                                                ^ (bad-whitespace)
+C: 87, 0: Exactly one space required after comma
+    return _queue_mgr.initialize(queue_name_list,queue_processor_list,algorithm)
+                                                                     ^ (bad-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+W:  4, 0: Relative import 'task_queue', should be 'pub.pirate.task_queue' (relative-import)
+C:  6, 0: Missing class docstring (missing-docstring)
+C: 10, 4: Missing method docstring (missing-docstring)
+C: 26, 4: Missing method docstring (missing-docstring)
+C: 38, 4: Missing method docstring (missing-docstring)
+C: 44, 4: Missing method docstring (missing-docstring)
+C: 56, 4: Missing method docstring (missing-docstring)
+W: 57, 8: Relative import 'http_client_engine', should be 'pub.pirate.http_client_engine' (relative-import)
+W: 71,12: Relative import 'controller', should be 'pub.pirate.controller' (relative-import)
+C: 74, 4: Missing method docstring (missing-docstring)
+W: 23, 8: Attribute '__algorithm' defined outside __init__ (attribute-defined-outside-init)
+C: 81, 0: Invalid constant name "_queue_mgr" (invalid-name)
+C: 83, 0: Missing function docstring (missing-docstring)
+C: 86, 0: Missing function docstring (missing-docstring)
+
+
+Report
+======
+72 statements analysed.
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |73     |93.59 |73       |=          |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |5      |6.41  |5        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+External dependencies
+---------------------
+::
+
+    pub 
+      \-pirate 
+        \-controller (pub.pirate.queue_mgr)
+        \-http_client_engine (pub.pirate.queue_mgr)
+        \-task_queue (pub.pirate.queue_mgr)
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |7      |7          |=          |14.29       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |2      |2          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |28     |28       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |4      |4        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++-------------------------------+------------+
+|message id                     |occurrences |
++===============================+============+
+|bad-whitespace                 |16          |
++-------------------------------+------------+
+|missing-docstring              |10          |
++-------------------------------+------------+
+|relative-import                |3           |
++-------------------------------+------------+
+|trailing-whitespace            |1           |
++-------------------------------+------------+
+|invalid-name                   |1           |
++-------------------------------+------------+
+|attribute-defined-outside-init |1           |
++-------------------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 5.56/10 (previous run: 5.56/10, +0.00)
+
+************* Module pub.pirate.queue_task_callback
+C:  5, 0: Exactly one space required after comma
+    def __init__(self,job):
+                     ^ (bad-whitespace)
+C:  8, 0: Exactly one space required after comma
+    def handle_response(self,response):
+                            ^ (bad-whitespace)
+C: 11, 0: Line too long (96/80) (line-too-long)
+C: 13, 0: Line too long (85/80) (line-too-long)
+C: 13, 0: Exactly one space required after comma
+                info = "%d+%s+%s" % (err.code,str(err.message),self._job.request.url)
+                                             ^ (bad-whitespace)
+C: 13, 0: Exactly one space required after comma
+                info = "%d+%s+%s" % (err.code,str(err.message),self._job.request.url)
+                                                              ^ (bad-whitespace)
+C: 14, 0: Line too long (89/80) (line-too-long)
+C: 14, 0: Exactly one space required after comma
+                logginghelper.error(logginghelper.LogicLog("None","Request","fail",info))
+                                                                 ^ (bad-whitespace)
+C: 14, 0: Exactly one space required after comma
+                logginghelper.error(logginghelper.LogicLog("None","Request","fail",info))
+                                                                           ^ (bad-whitespace)
+C: 14, 0: Exactly one space required after comma
+                logginghelper.error(logginghelper.LogicLog("None","Request","fail",info))
+                                                                                  ^ (bad-whitespace)
+C: 15, 0: Exactly one space required after comma
+                return (False,domain_set)
+                             ^ (bad-whitespace)
+C: 18, 0: Exactly one space required after comma
+            return (False,None)
+                         ^ (bad-whitespace)
+C: 19, 0: Exactly one space required after comma
+        return (True,domain_set)
+                    ^ (bad-whitespace)
+C: 22, 0: Exactly one space required after comma
+    def _wrapper(self,response):
+                     ^ (bad-whitespace)
+C: 23, 0: Exactly one space required after comma
+        domain_set = callback(self,response)
+                                  ^ (bad-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  1, 0: Unable to import 'xlog' (import-error)
+C:  8, 4: Missing method docstring (missing-docstring)
+R:  3, 0: Too few public methods (1/2) (too-few-public-methods)
+C: 21, 0: Missing function docstring (missing-docstring)
+C: 22, 4: Missing function docstring (missing-docstring)
+W: 26, 8: Relative import 'queue_mgr', should be 'pub.pirate.queue_mgr' (relative-import)
+
+
+Report
+======
+26 statements analysed.
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |25     |92.59 |25       |=          |
++----------+-------+------+---------+-----------+
+|docstring |1      |3.70  |1        |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |1      |3.70  |1        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+External dependencies
+---------------------
+::
+
+    pub 
+      \-pirate 
+        \-queue_mgr (pub.pirate.queue_task_callback)
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |1      |1          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |2      |2          |=          |50.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |2      |2          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |19     |19       |=          |
++-----------+-------+---------+-----------+
+|refactor   |1      |1        |=          |
++-----------+-------+---------+-----------+
+|warning    |1      |1        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++-----------------------+------------+
+|message id             |occurrences |
++=======================+============+
+|bad-whitespace         |12          |
++-----------------------+------------+
+|missing-docstring      |4           |
++-----------------------+------------+
+|line-too-long          |3           |
++-----------------------+------------+
+|too-few-public-methods |1           |
++-----------------------+------------+
+|relative-import        |1           |
++-----------------------+------------+
+|import-error           |1           |
++-----------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 1.92/10 (previous run: 1.92/10, +0.00)
+
+************* Module pub.pirate.req_gen
+C:  5, 0: Line too long (128/80) (line-too-long)
+C:  6, 0: Line too long (168/80) (line-too-long)
+C:  7, 0: Line too long (159/80) (line-too-long)
+C:  8, 0: Line too long (148/80) (line-too-long)
+C: 15, 0: Exactly one space required after comma
+def make_request(url,data=None,ostype=OS_TYPE_WINDOWS,no_keep_alive=False):
+                    ^ (bad-whitespace)
+C: 15, 0: Exactly one space required after comma
+def make_request(url,data=None,ostype=OS_TYPE_WINDOWS,no_keep_alive=False):
+                              ^ (bad-whitespace)
+C: 15, 0: Exactly one space required after comma
+def make_request(url,data=None,ostype=OS_TYPE_WINDOWS,no_keep_alive=False):
+                                                     ^ (bad-whitespace)
+C: 16, 0: Line too long (94/80) (line-too-long)
+C: 16, 0: Exactly one space required after comma
+    agent_list = (AGENT_PC_CHROME,AGENT_MOBILE_ANDROID,AGENT_MOBILE_IPHONE,AGENT_MOBILE_IPAD,)
+                                 ^ (bad-whitespace)
+C: 16, 0: Exactly one space required after comma
+    agent_list = (AGENT_PC_CHROME,AGENT_MOBILE_ANDROID,AGENT_MOBILE_IPHONE,AGENT_MOBILE_IPAD,)
+                                                      ^ (bad-whitespace)
+C: 16, 0: Exactly one space required after comma
+    agent_list = (AGENT_PC_CHROME,AGENT_MOBILE_ANDROID,AGENT_MOBILE_IPHONE,AGENT_MOBILE_IPAD,)
+                                                                          ^ (bad-whitespace)
+C: 22, 0: Exactly one space required after comma
+    headers = {"Connection":conn_seg,"User-Agent":agent}
+                                    ^ (bad-whitespace)
+C: 28, 0: Line too long (114/80) (line-too-long)
+C: 28, 0: Exactly one space required after comma
+    return tornado.httpclient.HTTPRequest(url,method,headers,data,connect_timeout=timeout,request_timeout=timeout)
+                                             ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return tornado.httpclient.HTTPRequest(url,method,headers,data,connect_timeout=timeout,request_timeout=timeout)
+                                                    ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return tornado.httpclient.HTTPRequest(url,method,headers,data,connect_timeout=timeout,request_timeout=timeout)
+                                                            ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return tornado.httpclient.HTTPRequest(url,method,headers,data,connect_timeout=timeout,request_timeout=timeout)
+                                                                 ^ (bad-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return tornado.httpclient.HTTPRequest(url,method,headers,data,connect_timeout=timeout,request_timeout=timeout)
+                                                                                         ^ (bad-whitespace)
+C: 30, 0: Exactly one space required after comma
+def make_json_request(url,json_map,ostype=OS_TYPE_WINDOWS):
+                         ^ (bad-whitespace)
+C: 30, 0: Exactly one space required after comma
+def make_json_request(url,json_map,ostype=OS_TYPE_WINDOWS):
+                                  ^ (bad-whitespace)
+C: 32, 0: Exactly one space required after comma
+    return make_request(url,data,ostype)
+                           ^ (bad-whitespace)
+C: 32, 0: Exactly one space required after comma
+    return make_request(url,data,ostype)
+                                ^ (bad-whitespace)
+C: 43, 0: Exactly one space required after comma
+    req = make_request("http://music.baidu.com/search",data="os=ios&key=sail")
+                                                      ^ (bad-whitespace)
+C: 48, 0: Line too long (86/80) (line-too-long)
+C: 48, 0: Exactly one space required after comma
+    req = make_json_request("http://music.baidu.com/search",{"os":"ios","key":"sail"})
+                                                           ^ (bad-whitespace)
+C: 48, 0: Exactly one space required after comma
+    req = make_json_request("http://music.baidu.com/search",{"os":"ios","key":"sail"})
+                                                                       ^ (bad-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+W:  3, 0: Relative import 'etc', should be 'pub.pirate.etc' (relative-import)
+C: 15, 0: Missing function docstring (missing-docstring)
+C: 30, 0: Missing function docstring (missing-docstring)
+C: 36, 4: Invalid constant name "client" (invalid-name)
+C: 38, 4: Invalid constant name "req" (invalid-name)
+C: 39, 4: Invalid constant name "resp" (invalid-name)
+C: 43, 4: Invalid constant name "req" (invalid-name)
+C: 44, 4: Invalid constant name "resp" (invalid-name)
+C: 48, 4: Invalid constant name "req" (invalid-name)
+C: 49, 4: Invalid constant name "resp" (invalid-name)
+
+
+Report
+======
+41 statements analysed.
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |36     |36       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |1      |0        |+1.00      |
++-----------+-------+---------+-----------+
+|error      |0      |2        |-2.00      |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------+------------+
+|message id        |occurrences |
++==================+============+
+|bad-whitespace    |19          |
++------------------+------------+
+|line-too-long     |7           |
++------------------+------------+
+|invalid-name      |7           |
++------------------+------------+
+|missing-docstring |3           |
++------------------+------------+
+|relative-import   |1           |
++------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 0.98/10 (previous run: -1.22/10, +2.20)
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |42     |89.36 |42       |=          |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |5      |10.64 |5        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+External dependencies
+---------------------
+::
+
+    json (pub.pirate.req_gen)
+    pub 
+      \-pirate 
+        \-etc (pub.pirate.req_gen)
+    tornado 
+      \-httpclient (pub.pirate.req_gen)
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |2      |2          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+************* Module pub.pirate.task_queue
+C:  4, 0: Exactly one space required after comma
+    def __init__(self,cb_class):
+                     ^ (bad-whitespace)
+C:  8, 0: Exactly one space required after comma
+    def get_count(self,domain):
+                      ^ (bad-whitespace)
+C: 16, 0: Exactly one space required after comma
+    def put(self,job):
+                ^ (bad-whitespace)
+C: 26, 0: Exactly one space required after comma
+    def signal(self,domain):
+                   ^ (bad-whitespace)
+C: 35, 0: Line too long (99/80) (line-too-long)
+C: 35, 0: Exactly one space required after comma
+            logginghelper.error(logginghelper.LogicLog("None","AddRequest","fail",job.request.url))
+                                                             ^ (bad-whitespace)
+C: 35, 0: Exactly one space required after comma
+            logginghelper.error(logginghelper.LogicLog("None","AddRequest","fail",job.request.url))
+                                                                          ^ (bad-whitespace)
+C: 35, 0: Exactly one space required after comma
+            logginghelper.error(logginghelper.LogicLog("None","AddRequest","fail",job.request.url))
+                                                                                 ^ (bad-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+F:  1, 0: Unable to import 'xlog' (import-error)
+C:  3, 0: Missing class docstring (missing-docstring)
+C:  8, 4: Missing method docstring (missing-docstring)
+C: 16, 4: Missing method docstring (missing-docstring)
+C: 26, 4: Missing method docstring (missing-docstring)
+
+
+Report
+======
+31 statements analysed.
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |32     |94.12 |32       |=          |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|comment   |1      |2.94  |1        |=          |
++----------+-------+------+---------+-----------+
+|empty     |1      |2.94  |1        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |4      |4          |=          |25.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |13     |13       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |0      |0        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------+------------+
+|message id        |occurrences |
++==================+============+
+|bad-whitespace    |7           |
++------------------+------------+
+|missing-docstring |5           |
++------------------+------------+
+|line-too-long     |1           |
++------------------+------------+
+|import-error      |1           |
++------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 5.81/10 (previous run: 5.81/10, +0.00)
+
+************* Module pub.pirate.warn_filter
+W:  5, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 20, 0: Exactly one space required after comma
+    file_handler_t = open("check.log","r")
+                                     ^ (bad-whitespace)
+C: 44, 0: Final newline missing (missing-final-newline)
+C:  1, 0: Missing module docstring (missing-docstring)
+C:  3, 0: Missing function docstring (missing-docstring)
+C:  7, 0: Missing function docstring (missing-docstring)
+C: 12, 0: Missing function docstring (missing-docstring)
+C: 20, 4: Invalid constant name "file_handler_t" (invalid-name)
+C: 21, 4: Invalid constant name "filename_t" (invalid-name)
+C: 22, 4: Invalid constant name "line_t" (invalid-name)
+C: 24, 8: Invalid constant name "line_t" (invalid-name)
+C: 29,12: Invalid constant name "filename_t" (invalid-name)
+C: 34,16: Invalid constant name "filename_t" (invalid-name)
+C: 37,16: Invalid constant name "line_t" (invalid-name)
+C: 42,20: Invalid constant name "filename_t" (invalid-name)
+W:  1, 0: Unused import os (unused-import)
+
+
+Report
+======
+37 statements analysed.
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |35     |87.50 |35       |=          |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |5      |12.50 |5        |=          |
++----------+-------+------+---------+-----------+
+
+
+
+External dependencies
+---------------------
+::
+
+    os (pub.pirate.warn_filter)
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |3      |3          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |14     |14       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |2      |2        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++----------------------+------------+
+|message id            |occurrences |
++======================+============+
+|invalid-name          |8           |
++----------------------+------------+
+|missing-docstring     |4           |
++----------------------+------------+
+|unused-import         |1           |
++----------------------+------------+
+|mixed-indentation     |1           |
++----------------------+------------+
+|missing-final-newline |1           |
++----------------------+------------+
+|bad-whitespace        |1           |
++----------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 5.68/10 (previous run: 5.68/10, +0.00)
+
+************* Module pub.pirate
+C:  1, 0: Missing module docstring (missing-docstring)
+
+
+Report
+======
+1 statements analysed.
+
+Duplication
+-----------
+
++-------------------------+----+---------+-----------+
+|                         |now |previous |difference |
++=========================+====+=========+===========+
+|nb duplicated lines      |0   |0        |=          |
++-------------------------+----+---------+-----------+
+|percent duplicated lines |0   |0        |=          |
++-------------------------+----+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |1      |1        |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |0      |0        |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------+------------+
+|message id        |occurrences |
++==================+============+
+|missing-docstring |1           |
++------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+
+Raw metrics
+-----------
+
++----------+-------+-------+---------+-----------+
+|type      |number |%      |previous |difference |
++==========+=======+=======+=========+===========+
+|code      |0      |0.00   |0        |=          |
++----------+-------+-------+---------+-----------+
+|docstring |0      |0.00   |0        |=          |
++----------+-------+-------+---------+-----------+
+|comment   |0      |0.00   |0        |=          |
++----------+-------+-------+---------+-----------+
+|empty     |1      |100.00 |1        |=          |
++----------+-------+-------+---------+-----------+
+
+
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |1      |1          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+
+
+

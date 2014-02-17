@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{625d2423-36e9-468e-85c2-33c352776396}</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>pirate.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>pirate</Name>
+    <RootNamespace>spider360</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="etc.py" />
+    <Compile Include="id_mgr.py" />
+    <Compile Include="queue_mgr.py" />
+    <Compile Include="queue_task_callback.py" />
+    <Compile Include="req_gen.py" />
+    <Compile Include="controller.py" />
+    <Compile Include="http_client_engine.py" />
+    <Compile Include="net_task.py" />
+    <Compile Include="task_queue.py" />
+    <Compile Include="pirate.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
