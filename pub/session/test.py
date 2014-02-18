@@ -28,3 +28,7 @@ if __name__ == "__main__":
     print "fetch game_works_002:"
     print resp.body.find("game_works_002")!=-1
     browser.report()
+
+    raw_input("press")
+
+    

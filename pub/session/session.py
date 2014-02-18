@@ -11,10 +11,8 @@ def get_domain(url):
 
 def create_cookie_header(cookie):
     if not cookie or len(cookie) == 0:
-        cookie_map = {}
-    else:
-        cookie_map = {"Cookie":cookie}
-    return tornado.httputil.HTTPHeaders(cookie_map)
+        return tornado.httputil.HTTPHeaders()
+    return tornado.httputil.HTTPHeaders({"Cookie":cookie})
 
 def _create_request(cookie_stg,url,method,headers,body,connect_timeout=10,request_timeout=10):
     cookie = cookie_stg.gen_header_cookies(url) 
@@ -22,7 +20,7 @@ def _create_request(cookie_stg,url,method,headers,body,connect_timeout=10,reques
     if headers:
         for key in headers.keys():
             req_headers.add(key,headers[key])
-    return tornado.httpclient.HTTPRequest(url,method,req_headers,body,None,None,None,connect_timeout,request_timeout)
+    return tornado.httpclient.HTTPRequest(url,method,req_headers,body,None,None,connect_timeout,request_timeout)
 
 class HandlerFilter(object):
     def __init__(self,handler,filter):
