@@ -72,7 +72,7 @@ class Session(object):
 
 class AsyncSession(Session):
     def __init__(self):
-        self.__last_handler = None
+        Session.__init__(self)
     
     class ResponseFilter(object):
         def __init__(self,handler,filter):
@@ -94,7 +94,7 @@ class AsyncSession(Session):
         req = _create_request(self._cookie_stg,url,method,headers,body,connect_timeout,request_timeout)
         client = tornado.httpclient.AsyncHTTPClient()
         handler = self.ResponseFilter(response_handler,self._filter_response)
-        client.fetch(req,handler)
+        client.fetch(req,handler.handle_response)
         return True
 
     def send_form(self,action,method,data_map,reponse_handler,connect_timeout=10,request_timeout=10):
