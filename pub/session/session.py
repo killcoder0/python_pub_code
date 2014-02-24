@@ -20,15 +20,15 @@ def _create_request(cookie_stg,url,method,headers,body,connect_timeout=10,reques
     if headers:
         for key in headers.keys():
             req_headers.add(key,headers[key])
-    return tornado.httpclient.HTTPRequest(url,method,req_headers,body,None,None,connect_timeout,request_timeout)
+    return tornado.httpclient.HTTPRequest(url,method,req_headers,body,None,None,connect_timeout,request_timeout,follow_redirects=False)
 
-class HandlerFilter(object):
-    def __init__(self,handler,filter):
-        self.__handler = handler
-        self.__filter = filter
-    def handle_response(self,response,seq):
-        self.__filter(response)
-        self.__handler(response,seq)
+#class HandlerFilter(object):
+#    def __init__(self,handler,filter):
+#        self.__handler = handler
+#        self.__filter = filter
+#    def handle_response(self,response,seq):
+#        self.__filter(response)
+#        self.__handler(response,seq)
 
 
 class Session(object):
@@ -36,6 +36,8 @@ class Session(object):
         self._cookie_stg = cookie_storage.CookieStg()
 
     def _filter_response(self,response):
+        if not response:
+            return
         headers = response.headers
         cookie_list = headers.get_list("set-cookie")
         domain = get_domain(response.request.url)
@@ -46,16 +48,25 @@ class Session(object):
     def fetch(self,url,method,headers,body,connect_timeout=10,request_timeout=10):
         req = _create_request(self._cookie_stg,url,method,headers,body,connect_timeout,request_timeout)
         client = tornado.httpclient.HTTPClient()
-        response = client.fetch(req)
-        if not response.error:
-            self._filter_response(response)
+        try:
+            response = client.fetch(req)
+        except Exception,e:
+            response = e.response
+        if not response:
+            return None
+        self._filter_response(response)
         if response.code in (301, 302, 303, 307):
             new_url = urlparse.urljoin(url,response.headers["Location"])
             return self.fetch(new_url,method,headers,body,connect_timeout,request_timeout)
         return response
 
-    def send_form(self,action,method,data_map,connect_timeout=10,request_timeout=10):
-        add_header = {"content-type":"application/x-www-form-urlencoded"}
+    def send_form(self,action,method,data_map,add_header_=None,connect_timeout=10,request_timeout=10):
+        if not add_header_:
+            add_header = {}
+        else:
+            import copy
+            add_header = copy.copy(add_header_)
+        add_header["content-type"] = "application/x-www-form-urlencoded"
         try:
             import urllib
             args = urllib.urlencode(data_map)
@@ -97,8 +108,10 @@ class AsyncSession(Session):
         client.fetch(req,handler.handle_response)
         return True
 
-    def send_form(self,action,method,data_map,reponse_handler,connect_timeout=10,request_timeout=10):
-        add_header = {"content-type":"application/x-www-form-urlencoded"}
+    def send_form(self,action,method,data_map,reponse_handler,add_header=None,connect_timeout=10,request_timeout=10):
+        if not add_header:
+            add_header = {}
+        add_header["content-type"] = "application/x-www-form-urlencoded"
         try:
             import urllib
             args = urllib.urlencode(data_map)
