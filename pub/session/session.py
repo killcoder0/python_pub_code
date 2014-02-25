@@ -81,6 +81,9 @@ class Session(object):
     def report(self):
         self._cookie_stg.print_cookie()
 
+    def clear(self):
+        self._cookie_stg.clear()
+
 class AsyncSession(Session):
     def __init__(self):
         Session.__init__(self)
