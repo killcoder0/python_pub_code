@@ -93,15 +93,14 @@ class AsyncSession(Session):
             self.__handler = handler
             self.__filter = filter
         def handle_response(self,response):
-            if not response.error:
-                self.__filter(response)
-                if response.code in (301, 302, 303, 307):
-                    new_url = urlparse.urljoin(response.request.url,response.headers["Location"])
-                    new_req = copy.copy(response.request)
-                    new_req.url = new_url
-                    client = tornado.httpclient.AsyncHTTPClient()
-                    client.fetch(new_req,self.handle_response)
-                    return
+            self.__filter(response)
+            if response.code in (301, 302, 303, 307):
+                new_url = urlparse.urljoin(response.request.url,response.headers["Location"])
+                new_req = copy.copy(response.request)
+                new_req.url = new_url
+                client = tornado.httpclient.AsyncHTTPClient()
+                client.fetch(new_req,self.handle_response)
+                return
             self.__handler(response)
 
     def fetch(self,url,method,headers,body,response_handler,connect_timeout=10,request_timeout=10):
