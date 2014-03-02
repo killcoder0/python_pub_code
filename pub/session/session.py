@@ -1,4 +1,4 @@
-import cookie_storage
+﻿import cookie_storage
 import tornado.httputil
 import tornado.httpclient
 import urlparse
@@ -21,6 +21,7 @@ def _create_request(cookie_stg,url,method,headers,body,connect_timeout=10,reques
         for key in headers.keys():
             req_headers.add(key,headers[key])
     return tornado.httpclient.HTTPRequest(url,method,req_headers,body,None,None,connect_timeout,request_timeout,follow_redirects=False)
+
 
 #class HandlerFilter(object):
 #    def __init__(self,handler,filter):
@@ -83,6 +84,9 @@ class Session(object):
 
     def clear(self):
         self._cookie_stg.clear()
+
+    def get_cookie_stg(self):
+        return self._cookie_stg
 
 class AsyncSession(Session):
     def __init__(self):
