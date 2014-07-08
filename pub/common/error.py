@@ -46,6 +46,9 @@ def pack_errinfo_json(error,detail=None):
 def match(code,error_tuple):
     return code == error_tuple[0]
 
+def pack_ok_json():
+    return '{"result":"ok"}'
+
 if __name__ == "__main__":
     print pack_errinfo_json(ERROR_INTERNAL_SERVER_ERROR,"shit")
     raw_input()

@@ -4,6 +4,7 @@
 # -*- coding:utf-8 -*- 
 import sys
 import os
+import os.path
 import platform
 
 def get_cur_info_within_exception():
@@ -100,9 +101,30 @@ def test_directory(test_dir):
         return False
     return True
 
-
+def rmdir_r(path,ignore_error=False):
+    items = os.listdir(path)
+    for item in items:
+        try:
+            fullpath = os.path.join(path,item)
+            if os.path.isdir(fullpath):
+                rmdir_r(fullpath,ignore_error)
+            else:
+                os.remove(fullpath)
+        except Exception:
+            if ignore_error:
+                continue
+            else:
+                break
+    os.rmdir(path)
 
 if __name__ == '__main__':
     test()
     print get_local_addr()
     os.system("pause")
+
+    try:
+        rmdir_r(r"E:\git__\flashp2p\livems_refactor\live_master\pub\common\tp1")
+    except Exception,e:
+        print str(e)
+
+    raw_input("press")
