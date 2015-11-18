@@ -72,32 +72,45 @@ def FuncProfileLog(FuncName,posinfo,time_cost,addition_info=""):
 def debug(args):
     try:
         xylogging.debug(args[0],args[1])
-    except:
-        pass
+    except Exception,e:
+        print str(e)
 
 def info(args):
     try:
         xylogging.info(args[0],args[1])
-    except:
-        pass
+    except Exception,e:
+        print str(e)
 
 def warn(args):
     try:
         xylogging.warn(args[0],args[1])
-    except:
-        pass
+    except Exception,e:
+        print str(e)
 
 def error(args):
     try:
         xylogging.error(args[0],args[1])
-    except:
-        pass
+    except Exception,e:
+        print str(e)
 
 def critical(args):
     try:
         xylogging.critical(args[0],args[1])
-    except:
-        pass
+    except Exception,e:
+        print str(e)
+
+
+def report_standard_http_response(response,attach_info,action_name):
+    if not response or response.error:
+        critical(LogicLog("None",action_name,"http_error",attach_info))
+    else:
+        import json
+        resp = json.loads(response.body)
+        if resp["result"] == "ok":
+            info(LogicLog("None",action_name,"ok",attach_info))
+        else:
+            info_msg = "[attach_info:%s][err_info:%s]" % (attach_info,resp["err"]["info"])
+            error(LogicLog("None","AddChannelToChunkServer","fail",info_msg))
 
 #code below is just for testing
 def main():

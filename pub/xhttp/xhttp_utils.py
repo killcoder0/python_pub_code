@@ -28,9 +28,8 @@ class ServerResponse(object):
 def render_to_response(body,code=200,headers={}):
     return ServerResponse(code,headers,body)
 
-def pack_response(code):
-    resp = render_to_response("",code)
-    return resp.pack_http_response_buf()
+def pack_code_response(code,headers={}):
+    return render_to_response("",code,headers)
 
 def login_required(auth_func):
     def _deco(handler):

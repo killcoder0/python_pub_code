@@ -101,11 +101,25 @@ def test_directory(test_dir):
         return False
     return True
 
-def rmdir_r(path,ignore_error=False):
-    items = os.listdir(path)
+def rmdir_r(path,rename=False,ignore_error=False):
+    work_dir = path
+    if rename:
+        try:
+            num = 1
+            while True:
+                new_name = "%s_tp%d" % (work_dir,num)
+                if os.path.exists(new_name):
+                    num += 1
+                    continue
+                os.rename(work_dir,new_name)
+                work_dir = new_name
+                break
+        except Exception,e:
+            pass
+    items = os.listdir(work_dir)
     for item in items:
         try:
-            fullpath = os.path.join(path,item)
+            fullpath = os.path.join(work_dir,item)
             if os.path.isdir(fullpath):
                 rmdir_r(fullpath,ignore_error)
             else:
@@ -115,7 +129,7 @@ def rmdir_r(path,ignore_error=False):
                 continue
             else:
                 break
-    os.rmdir(path)
+    os.rmdir(work_dir)
 
 if __name__ == '__main__':
     test()

@@ -33,10 +33,12 @@ class LoggingRecord(object):
         if not os.path.isdir(logdir):
             try:
                 os.mkdir(logdir)
-            except OSError:
+            except OSError,e:
+                print str(e)
                 return False
         self.__log_dir = logdir
         if platform.system() != "Windows" and not os.access(self.__log_dir,os.R_OK|os.W_OK|os.X_OK):
+            print "the directory is not accessible:",logdir
             return False
         self.__logger.setLevel(level)
         if output_to_console:
@@ -77,10 +79,12 @@ logging_recorders = {}
 def add_recorder(record_name,path,level,output_to_console=False):
     global logging_recorders
     if logging_recorders.has_key(record_name):
+        print "log recorder already exists",record_name
         return False
     level_dict = {"default":logging.NOTSET,"debug":logging.DEBUG,"info":logging.INFO,\
                 "warnning":logging.WARNING,"error":logging.ERROR,"critical":logging.CRITICAL}
     if not level_dict.has_key(level):
+        print "invalid level:",level
         return False
     level = level_dict[level]
     recorder = LoggingRecord(record_name)
